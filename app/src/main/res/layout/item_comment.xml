@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:gravity="top"
+    android:background="@android:color/white">
+
+    <!-- Avatar -->
+    <ImageView
+        android:id="@+id/imgCommentAvatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/avatar_circle_mask"
+        android:scaleType="centerCrop"
+        android:contentDescription="Avatar"
+        android:background="@drawable/circle_white_bg"
+        android:clipToOutline="true" />
+
+    <!-- Content container -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/txtCommentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên người bình luận"
+            android:textColor="#212121"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <!-- Comment text -->
+        <TextView
+            android:id="@+id/txtCommentContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nội dung bình luận ở đây"
+            android:textColor="#424242"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

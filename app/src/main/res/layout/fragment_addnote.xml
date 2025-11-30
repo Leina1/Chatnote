@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.AddnoteFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#F2F2F2"
+        android:padding="16dp">
+
+        <!-- Toolbar -->
+        <RelativeLayout
+            android:id="@+id/addNoteToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#FF2626"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnBackAddNote"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/icon_back"
+                android:tint="@android:color/white"
+                android:contentDescription="Back" />
+
+            <TextView
+                android:id="@+id/addNoteToolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/btnBackAddNote"
+                android:layout_marginStart="12dp"
+                android:text="Thêm ghi chú"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- EditText tiêu đề -->
+        <EditText
+            android:id="@+id/edtNoteTitle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Tiêu đề"
+            android:background="@drawable/edit_text_rounded_corner"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:textColor="#212121"
+            android:textColorHint="#888888" />
+
+        <!-- EditText nội dung -->
+        <EditText
+            android:id="@+id/edtNoteContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Nội dung ghi chú"
+            android:background="@drawable/edit_text_rounded_corner"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:textColor="#212121"
+            android:textColorHint="#888888"
+            android:gravity="top"
+            android:inputType="textMultiLine" />
+
+        <!-- Section gắn hình ảnh -->
+        <LinearLayout
+            android:id="@+id/imageSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ảnh đính kèm"
+                android:textSize="14sp"
+                android:textColor="#616161"
+                android:layout_marginBottom="8dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/edit_text_rounded_corner">
+
+                <ImageView
+                    android:id="@+id/imgNoteAttachment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="Hình đính kèm"
+                    android:src="@drawable/pic"
+                    android:background="@drawable/edit_text_rounded_corner" />
+
+                <ImageButton
+                    android:id="@+id/btnRemoveImage"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/circle_white_bg"
+                    android:src="@android:drawable/ic_menu_close_clear_cancel"
+                    android:tint="#FF2626"
+                    android:contentDescription="Xóa ảnh"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <!-- Nút chọn ảnh -->
+            <Button
+                android:id="@+id/btnAttachImage"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:text="Chọn ảnh"
+                android:backgroundTint="#FF2626"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Nút lưu note -->
+        <Button
+            android:id="@+id/btnSaveNote"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Lưu"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FF2626"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Ảnh sản phẩm -->
+        <ImageView
+            android:id="@+id/image_product"
+            android:src="@drawable/pic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:contentDescription="Product Image"
+            android:scaleType="centerCrop" />
+
+        <!-- Tên sản phẩm -->
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/image_product"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="48dp"
+            android:layout_toEndOf="@id/image_product"
+            android:text="Note Name"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <!-- Mô tả sản phẩm -->
+        <TextView
+            android:id="@+id/text_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_name"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="48dp"
+            android:layout_toEndOf="@id/image_product"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Description..."
+            android:textSize="14sp" />
+        <!-- thời gian note -->
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_description"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/image_product"
+            android:text="27/11/2025"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="14sp" />
+        <!-- Nút Sửa (icon) -->
+        <ImageButton
+            android:id="@+id/btnEdit"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Sửa"
+            android:src="@android:drawable/ic_menu_edit"
+            app:tint="#FF9800"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!-- Nút Xoá (icon) -->
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_below="@id/btnEdit"
+            android:layout_alignEnd="@id/btnEdit"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Xoá"
+            android:src="@android:drawable/ic_menu_delete"
+            app:tint="#FF0000" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

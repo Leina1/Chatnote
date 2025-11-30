@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "293352133110",
+    "project_id": "chatnote-c4be1",
+    "storage_bucket": "chatnote-c4be1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293352133110:android:8b15a9c2a63e7d388d77d7",
+        "android_client_info": {
+          "package_name": "com.example.chatnote"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "293352133110-s4uq10s3udusga2v0jkorcj3pg34mc2g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLhz8gvlMKmoN5_x6ZzxOp2qNmjXG1364"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "293352133110-s4uq10s3udusga2v0jkorcj3pg34mc2g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
